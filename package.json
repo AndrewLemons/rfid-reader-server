@@ -4,6 +4,7 @@
 	"description": "RFID card reader socket.io server",
 	"scripts": {
 		"start": "node dist/index.js",
+		"dev": "ts-node src/index.ts",
 		"build": "tsc",
 		"format": "prettier --write ."
 	},
