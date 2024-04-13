@@ -1,0 +1,62 @@
+# RFID Reader Server
+
+A local socket.io interface for RFID card readers.
+
+This is designed to work with Wave ID readers. It may work with other readers, but it has not been tested.
+
+## Configuration
+
+The server can be configured using environment variables. The following variables are available.
+
+[cols="1,1,1"]
+|===
+|**Env Var**
+|**Description**
+|**Default**
+
+|`SERVER_PORT`
+|The port to listen on.
+|`57294`
+
+|`SERVER_ORIGIN`
+|The origin to allow connections from.
+|`*`
+
+|`READER_PORT`
+|The port the reader is connected to.
+|`/dev/ttyUSB0`
+
+|`READER_BAUD`
+|The baud rate for the reader.
+|`9600`
+|===
+
+## Socket Events
+
+[cols="1,1,1"]
+|===
+|**Event**
+|**Description**
+|**Data**
+
+|`card_scan`
+|Emitted when a card is scanned.
+|`{ data: string, timestamp: number }`
+
+|`card_scan_history`
+|Emitted when the card scan history is requested.
+|`{ data: string, timestamp: number }[]`
+|=== 
+
+## Socket Commands
+
+[cols="1,1,1"]
+|===
+|**Command**
+|**Description**
+|**Data**
+
+|`get_card_scan_history`
+|Request the card scan history.
+|`null`
+|===

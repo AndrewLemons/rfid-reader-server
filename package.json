@@ -1,0 +1,19 @@
+{
+	"name": "rfid-reader-server",
+	"version": "1.0.0",
+	"description": "RFID card reader socket.io server",
+	"scripts": {
+		"start": "node dist/index.js",
+		"build": "tsc",
+		"format": "prettier --write ."
+	},
+	"dependencies": {
+		"serialport": "^12.0.0",
+		"socket.io": "^4.7.5"
+	},
+	"devDependencies": {
+		"prettier": "^3.2.5",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.4.5"
+	}
+}

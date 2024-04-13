@@ -1,0 +1,11 @@
+services:
+  server:
+    build: .
+    network_mode: host
+    devices:
+      - /dev/ttyACM0:/dev/ttyACM0
+    environment:
+      - READER_PORT=/dev/ttyACM0
+      - READER_BAUD=9600
+      - SERVER_PORT=57294
+      - SERVER_ORIGIN=*
