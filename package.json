@@ -4,10 +4,12 @@
 	"description": "RFID card reader socket.io server",
 	"scripts": {
 		"start": "node dist/index.js",
+		"dev": "ts-node src/index.ts",
 		"build": "tsc",
 		"format": "prettier --write ."
 	},
 	"dependencies": {
+		"dotenv": "^16.4.5",
 		"serialport": "^12.0.0",
 		"socket.io": "^4.7.5"
 	},
