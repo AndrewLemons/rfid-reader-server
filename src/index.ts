@@ -15,7 +15,7 @@ const connector = new Connector({
 });
 
 const server = new Server(connector, {
-	origin: SERVER_ORIGIN,
+	port: SERVER_PORT,
 });
 
-server.listen(SERVER_PORT);
+server.listen();
